@@ -1,0 +1,8 @@
+{
+  "name": "ci-mental-model",
+  "version": "1.0.0",
+  "description": "Learning CI basics with GitHub Actions",
+  "scripts": {
+    "test": "echo \"TEST PASSED\" > result.txt"
+  }
+}
