@@ -7,14 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Run tests
         run: npm test
 
-      - name: Send test results to dashboard
+      - name: Send test report to dashboard
         run: |
           curl -X POST https://httpbin.org/post \
-            -H "Content-Type: text/plain" \
-            --data-binary @result.txt
+            -H "Content-Type: application/xml" \
+            --data-binary @junit.xml
