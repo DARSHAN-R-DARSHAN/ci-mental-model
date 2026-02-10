@@ -2,7 +2,7 @@
   "name": "ci-mental-model",
   "version": "1.0.0",
   "scripts": {
-    "test": "npx jest --ci --reporters=default --reporters=jest-junit"
+    "test": "node node_modules/jest/bin/jest.js --ci --reporters=default --reporters=jest-junit"
   },
   "devDependencies": {
     "jest": "^29.0.0",
